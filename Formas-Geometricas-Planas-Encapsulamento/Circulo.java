@@ -3,18 +3,26 @@ import java.util.Scanner;
 public class Circulo {
 	
 
-		double raio;
-		
-	public Circulo( double raio) {
-		Scanner sc= new Scanner(System.in);
-		
-		
-		raio=sc.nextDouble();
-	}
+		 private double raio;
+	    private double area;
 
-	public double calcularArea() {
-		return(3.14*(raio*raio));
-	}
-	}
+	    public void calcArea() {
+	        this.area = Math.PI * raio * raio;
+	    }
 
+	    public void recebeRaio(double raio) {
+	        this.raio = raio;
+	    }
 
+	    public double mostraAreaComRetorno() {
+	        return this.area;
+	    }
+
+	    public double getRaio() {
+	        return raio;
+	    }
+
+	    public double getArea() {
+	        return area;
+	    }
+	}
