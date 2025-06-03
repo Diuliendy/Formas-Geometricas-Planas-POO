@@ -1,32 +1,46 @@
 package br.edu.figurasgeometricasplanas;
 import java.util.Scanner;
 public class Trapézio {
-	double Basemaior;
-	double basemenor;
-	double altura;
-	
-	
-	
-public Trapézio(double Basemaior, double basemenor,double altura) {
-	Scanner sc= new Scanner(System.in);
-	
-     Basemaior=sc.nextDouble();
-     Basemaior=sc.nextDouble();
-	 altura=sc.nextDouble();
-		
-		
+	public class Trapezio {
+	    private double maior;
+	    private double menor;
+	    private double altura;
+	    private double area;
+
+	    public void calcArea() {
+	        this.area = ((maior + menor) * altura) / 2;
+	    }
+
+	    public void recebeMaior(double maior) {
+	        this.maior = maior;
+	    }
+
+	    public void recebeMenor(double menor) {
+	        this.menor = menor;
+	    }
+
+	    public void recebeAltura(double altura) {
+	        this.altura = altura;
+	    }
+
+	    public double mostraAreaComRetorno() {
+	        return this.area;
+	    }
+
+	    public double getMaior() {
+	        return maior;
+	    }
+
+	    public double getMenor() {
+	        return menor;
+	    }
+
+	    public double getAltura() {
+	        return altura;
+	    }
+
+	    public double getArea() {
+	        return area;
+	    }
+	}
 }
-
-public double calcularArea() {
-	return((Basemaior*basemenor)*altura/2);
-}
-
-
-
-public double listadeAtributos() {
-	return 3;
-}
-
-
-}
-
