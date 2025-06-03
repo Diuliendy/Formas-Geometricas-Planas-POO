@@ -1,23 +1,37 @@
 package br.edu.figurasgeometricasplanas;
 import  java.util.Scanner;
 public class Pentágono {
-	double apotema;
-	double perimetro;
-	
-	
-public Pentágono(double apotema, double perimetro) {
-	Scanner sc= new Scanner(System.in);
-	
-	apotema=sc.nextDouble();
-	perimetro=sc.nextDouble();
-}
+	public class Pentagono {
+	    private double perimetro;
+	    private double apotema;
+	    private double area;
 
-public double calcularArea() {
-	return(apotema*perimetro)/2;
-}
+	    public void calcArea() {
+	        this.area = (perimetro * apotema) / 2;
+	    }
 
-public double listadeAtributos() {
-	return 2;
-}
+	    public void recebePerimetro(double perimetro) {
+	        this.perimetro = perimetro;
+	    }
 
+	    public void recebeApotema(double apotema) {
+	        this.apotema = apotema;
+	    }
+
+	    public double mostraAreaComRetorno() {
+	        return this.area;
+	    }
+
+	    public double getPerimetro() {
+	        return perimetro;
+	    }
+
+	    public double getApotema() {
+	        return apotema;
+	    }
+
+	    public double getArea() {
+	        return area;
+	    }
+	}
 }
