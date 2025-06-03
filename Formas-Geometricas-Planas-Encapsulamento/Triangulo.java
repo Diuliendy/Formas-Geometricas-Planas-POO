@@ -2,17 +2,37 @@ package br.edu.figurasgeometricasplanas;
 import java.util.Scanner;
 public class Triangulo {
 
-	double base;
-	double altura;
-	
-public Triangulo(double base, double altura) {
-	Scanner sc= new Scanner(System.in);
-	
-	base=sc.nextDouble();
-	altura=sc.nextDouble();
-}
+	public class Triangulo {
+    private double base;
+    private double altura;
+    private double area;
 
-public double calcularArea() {
-	return(base*altura)/2;
-}
+    public void calcArea() {
+        this.area = (base * altura) / 2;
+    }
+
+    public void recebeBase(double base) {
+        this.base = base;
+    }
+
+    public void recebeAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double mostraAreaComRetorno() {
+        return this.area;
+    }
+
+    // Getters e Setters
+    public double getBase() {
+        return base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getArea() {
+        return area;
+    }
 }
