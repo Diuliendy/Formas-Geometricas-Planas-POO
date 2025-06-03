@@ -2,18 +2,26 @@ package br.edu.figurasgeometricasplanas;
 import java.util.Scanner;
 public class Quadrado {
 
-		double lado;
-		
-	public Quadrado(double lado) {
-		Scanner sc= new Scanner(System.in);
-		
-		lado=sc.nextDouble();
-		
-	}
+		  private double lado;
+	    private double area;
 
-	public double calcularArea() {
-		return(lado*lado);
-	}
-	}
+	    public void calcArea() {
+	        this.area = lado * lado;
+	    }
 
+	    public void recebeLado(double lado) {
+	        this.lado = lado;
+	    }
 
+	    public double mostraAreaComRetorno() {
+	        return this.area;
+	    }
+
+	    public double getLado() {
+	        return lado;
+	    }
+
+	    public double getArea() {
+	        return area;
+	    }
+	}
