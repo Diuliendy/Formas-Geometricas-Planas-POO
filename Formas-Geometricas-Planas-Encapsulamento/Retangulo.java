@@ -3,19 +3,38 @@ import java.util.Scanner;
 public class Retangulo {
 	
 
-		double base;
-		double altura;
-		
-	public Retangulo(double base, double altura) {
-		Scanner sc= new Scanner(System.in);
-		
-		base=sc.nextDouble();
-		altura=sc.nextDouble();
+	 private double base;
+	    private double altura;
+	    private double area;
+
+	    public void calcArea() {
+	        this.area = base * altura;
+	    }
+
+	    public void recebeBase(double base) {
+	        this.base = base;
+	    }
+
+	    public void recebeAltura(double altura) {
+	        this.altura = altura;
+	    }
+
+	    public double mostraAreaComRetorno() {
+	        return this.area;
+	    }
+
+	    public double getBase() {
+	        return base;
+	    }
+
+	    public double getAltura() {
+	        return altura;
+	    }
+
+	    public double getArea() {
+	        return area;
+	    }
 	}
 
-	public double calcArea() {
-		return(base*altura);
-	}
-	}
 
 
